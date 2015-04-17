@@ -15,7 +15,7 @@
 #-----------------------
 
 # dotfiles directory
-dotfiles_dir=${HOME}/dotfiles 
+dotfiles_dir=${HOME}/dotfiles/home 
 
 # old dotfiles backup directory
 olddotfiles_dir=${HOME}/dotfiles_old 
@@ -54,11 +54,29 @@ create_symlinks () {
 }
 
 
+get_oldconfig_back () {
+
+    echo "Moving back ${olddotfiles_dir}/.dotfiles to ${HOME}"
+    echo ""
+    for file in $files; do
+        echo "-> copy $olddotfiles_dir/.$file to ${HOME}/.$file"
+        echo ""
+        # Use mv 
+        #mv $olddotfiles_dir/.$file to ${HOME}/.$file
+        # Use rm + cp
+        #rm ${HOME}/.$file
+        #cp $olddotfiles_dir/.$file to ${HOME}/.$file
+    done
+
+}
+
 
 #-----------------------
 # launch script
 #-----------------------
 create_symlinks
+
+# get_oldconfig_back
 
 
 
