@@ -1,0 +1,93 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+# ... and ignore same sucessive entries.
+export HISTCONTROL=ignoreboth
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+
+# This stores history as always one line. Therefore, if a command is typed as:
+#
+#     cmd \
+#         -a flag1\
+#         -b flag2
+#
+# it will always be stored as `cmd -a flag1 -b flag2` in history. I find this
+# much easier for re-running commands, especially when they must be modified.
+shopt -s cmdhist
+
+# ### histappend 
+# This is a useful option when one uses multiple terminals at one time
+# (as I always do). This option will append each session's history to the
+# $HISTFILE rather than replace it. This way, history from all terminals can be
+# accessed through the `history` command.
+shopt -s histappend
+
+# ### no empty cmd completion
+# This last option is just for performance; when there is nothing yet to
+# complete, don't try to complete everything.
+shopt -s no_empty_cmd_completion # don't complete empty lines
+
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+
+
+#-----------------------
+# autre
+#-----------------------
+
+#desactive les messages de console
+#mesg n
+
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# enable alias
+if [[ -f ${HOME}/.bash_alias ]]; then
+    . ${HOME}/.bash_alias
+fi
+
+# enable prompt with color
+if [[ -f ${HOME}/.bash_prompt ]]; then
+    . ${HOME}/.bash_prompt
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# pour editer directement avec vim les paquets Aur
+export EDITOR="vim"
+
+# Man pages en couleurs
+if [ -f /usr/bin/most ]; then
+    export MANPAGER="/usr/bin/most -s"
+fi
+
+# set up java env
+#. /opt/sun-java6/envsetup.sh
+
+
+

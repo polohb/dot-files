@@ -1,0 +1,107 @@
+##
+# FileName : bash_alias               
+#                                     
+# Author :  polohb@gmail.com          
+#                                     
+# Desc : some usefull personal alias  
+##                                     
+
+
+#-----------------------
+# enable color support
+#-----------------------
+
+eval "`dircolors -b`"
+alias ls='ls --color=auto'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+#-----------------------
+# some ls aliases
+#-----------------------
+
+alias ll='ls -lh'
+alias la='ls -A'
+alias l='ls -CF'
+alias lla='ll -Al'
+
+
+#-----------------------
+# tar
+#-----------------------
+
+alias tarc='tar -cvvzf'
+alias tarx='tar -xvvzf'
+alias tart='tar -tvvzf'
+
+
+#-----------------------
+# rm
+#-----------------------
+
+# interactive rm
+alias rm='rm -i'
+
+# delete Xemacs save files
+alias rmxemacs='echo "Suppression des fichiers générés par Xemacs" ; rm -rf *~ .*~ \#*'
+
+# delete .saves-* files
+alias rmsaves='echo "Suppression des fichiers .save-*" ; rm -rf .saves-*'
+
+# delete 
+alias rmnfotorrent='rm *.nfo *.torrent'
+
+
+#-----------------------
+# change directories 
+#-----------------------
+
+alias cddl='cd /media/DATA_1TO/dl/'
+alias cd2ahd='cd /media/DATA_2TO_A/VIDEO/FILMS/HD'
+alias cd2bhd='cd /media/DATA_2TO_B/VIDEO/FILMS/HD'
+alias cd2chd='cd /media/DATA_2TO_C/VIDEO/FILMS/HD'
+
+
+#-----------------------
+# screen
+#-----------------------
+
+# list opened screen sessions
+alias scl='screen -list'
+
+
+#-----------------------
+# Git cmd
+#-----------------------
+
+if [ -f /usr/bin/git ]; then
+  alias gco='git checkout'
+  alias gc='git commit'
+  alias g+='git add'
+  alias gpush='git push'
+  alias gpull='git pull'
+  alias gs='git status'
+  alias gb='git branch'
+  alias gl='git log'
+  alias gdiff='git diff'
+fi
+
+
+#-----------------------
+# Others
+#-----------------------
+
+# The pg alias is a shortcut for looking for process names or PIDs based on a
+# pattern. It just greps the output of the ps command. The -A flag shows all
+# processes and the -f flag shows more information about each process in a nice
+# columnar format. Example:
+alias pg='ps -Af | grep $1'
+
+# I often search my history, so I created an alias to grep it.
+alias hist='history | grep'
+
+
+

@@ -1,0 +1,46 @@
+##
+# FileName : bash_prompt               
+#                                     
+# Author :  polohb@gmail.com          
+#                                     
+# Desc : 
+#   - define some colors  
+#   - set a colorized prompt
+#   - change xterm title
+#
+##
+
+
+#-----------------------
+# color
+#-----------------------
+red='[0;31m'
+RED='[1;31m'
+violet='[0;35m'
+BLUE='[1;34m'
+cyan='[0;36m'
+CYAN='[1;36m'
+vertfonce='[0;32m'
+jaune='[0;33m'
+BLANC='[0;37m'
+
+
+#-----------------------
+# Prompt
+#-----------------------
+PS1="${debian_chroot:+($debian_chroot)}\[\033$vertfonce\][\t] \[\033$jaune\][\u@\h]\[\033$BLANC\] : \[\033$red\]\w\[\033$BLANC\]\[\033[00m\] \$ "
+
+
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+    xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    ;;
+    *)
+    ;;
+esac
+
+
+
+
