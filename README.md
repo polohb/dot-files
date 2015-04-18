@@ -34,4 +34,30 @@ What the script do :
 └── README.md
 ```
 
+### What's in it : 
 
+#### aliases :
+
+* ls :
+ * `ll` for ='ls -lh'
+ * `la` for 'ls -A'
+ * `l` for 'ls -CF'
+ * `lla` for 'll -Al'
+
+* tar : 
+ * `tarc` for 'tar -cvvzf'
+ * `tarx` for 'tar -xvvzf'
+ * `tart` for 'tar -tvvzf
+
+* git (only if `/usr/bin/git` exist) : 
+ * `gco` for 'git checkout'
+ * `gc`for 'git commit'
+ * `g+` for 'git add'
+ * `gpush` for 'git push'
+ * `gpull` for 'git pull'
+ * `gs` for 'git status'
+ * `gb` for 'git branch'
+ * `gl` for 'git log'
+ * `gdiff` for 'git diff'
+
+and others minors alias (@see ~/dotfiles/home/bash_alias)
