@@ -34,10 +34,10 @@ create_symlinks () {
     # create dotfiles_old in homedir
     echo "Creating backup dir : ${olddotfiles_dir}"
     echo ""
-    #mkdir -p ${olddotfiles_dir}
+    mkdir -p ${olddotfiles_dir}
 
     # change to the dotfiles directory
-    #cd ${dotfiles_dir}
+    cd ${dotfiles_dir}
 
     # move any existing dotfiles in homedir to ~/dotfiles_old
     # then create symlinks from the homedir to any files in the 
@@ -48,8 +48,8 @@ create_symlinks () {
         echo "-> copy ${HOME}/.$file to $olddotfiles_dir/.$file"
         echo "   link ${HOME}/.$file -> ${dotfiles_dir}/${file}"
         echo ""
-        #mv ${HOME}/.${file} ${olddotfiles_dir}
-        #ln -s ${dotfiles_dir}/${file} ${HOME}/.$file
+        mv ${HOME}/.${file} ${olddotfiles_dir}/
+        ln -s ${dotfiles_dir}/${file} ${HOME}/.$file
     done
 }
 
@@ -62,8 +62,8 @@ get_oldconfig_back () {
         echo "-> copy $olddotfiles_dir/.$file to ${HOME}/.$file"
         echo ""
         # Use rm + cp
-        #rm ${HOME}/.$file
-        #cp $olddotfiles_dir/.$file to ${HOME}/.$file
+        rm ${HOME}/.$file
+        cp $olddotfiles_dir/.$file to ${HOME}/.$file
     done
 
 }
