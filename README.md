@@ -9,14 +9,28 @@ Run this :
 ```
 cd ~/
 git clone https://github.com/polohb/dotfiles.git
-cd dotfiles
-bash makesymlinks.sh 
+cd dotfiles/scripts/
+bash install.sh 
 ```
 
 What the script do :
  
  * backup `~/.dotfiles` to `.~/dotfiles_old/` 
  * symlinks files from `~/dotfiles/home/` to the home directory `~/`
+
+
+## Uninstall
+Run this : 
+```
+cd ~/dotfiles/scripts/
+bash uninstall.sh 
+```
+
+What the script do :
+ 
+ * delete current `~/.dotfiles` files
+ * copy `~/.dotfiles_old/.dotfiles` to the home directory `~/`
+
 
 
 ## Hierarchy
@@ -31,7 +45,12 @@ What the script do :
 │   ├── screenrc
 │   └── vimrc
 ├── makesymlinks.sh
-└── README.md
+├── prompt.png
+├── README.md
+└── scripts
+    ├── install.sh
+    ├── uninstall.sh
+    └── vars.sh
 ```
 
 ### What's in it : 
