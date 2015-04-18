@@ -54,6 +54,7 @@ What the script do :
  * `gc`for 'git commit'
  * `g+` for 'git add'
  * `gpush` for 'git push'
+ * `gpom` for 'git push origin master'
  * `gpull` for 'git pull'
  * `gs` for 'git status'
  * `gb` for 'git branch'

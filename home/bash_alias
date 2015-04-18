@@ -82,6 +82,7 @@ if [ -f /usr/bin/git ]; then
   alias gc='git commit'
   alias g+='git add'
   alias gpush='git push'
+  alias gpom='git push origin master'
   alias gpull='git pull'
   alias gs='git status'
   alias gb='git branch'
