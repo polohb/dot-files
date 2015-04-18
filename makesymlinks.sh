@@ -61,8 +61,6 @@ get_oldconfig_back () {
     for file in $files; do
         echo "-> copy $olddotfiles_dir/.$file to ${HOME}/.$file"
         echo ""
-        # Use mv 
-        #mv $olddotfiles_dir/.$file to ${HOME}/.$file
         # Use rm + cp
         #rm ${HOME}/.$file
         #cp $olddotfiles_dir/.$file to ${HOME}/.$file
