@@ -15,7 +15,7 @@ bash install.sh
 
 What the script do :
  
- * backup `~/.dotfiles` to `.~/dotfiles_old/` 
+ * backup `~/.dotfiles` to `~/.dotfiles_old/` 
  * symlinks files from `~/dotfiles/home/` to the home directory `~/`
 
 
@@ -29,7 +29,7 @@ bash uninstall.sh
 What the script do :
  
  * delete current `~/.dotfiles` files
- * copy `~/.dotfiles_old/.dotfiles` to the home directory `~/`
+ * copy saved `~/.dotfiles_old/.dotfiles` to the home directory `~/`
 
 
 
@@ -44,7 +44,6 @@ What the script do :
 │   ├── profile
 │   ├── screenrc
 │   └── vimrc
-├── makesymlinks.sh
 ├── prompt.png
 ├── README.md
 └── scripts
