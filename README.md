@@ -16,7 +16,7 @@ bash makesymlinks.sh
 What the script do :
  
  * backup `~/.dotfiles` to `.~/dotfiles_old/` 
- * symlinks files from `~/dotfiles/home/` to the home directory `.~/`
+ * symlinks files from `~/dotfiles/home/` to the home directory `~/`
 
 
 ## Hierarchy
