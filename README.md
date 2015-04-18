@@ -76,12 +76,12 @@ and others minors alias (@see ~/dotfiles/home/bash_alias)
 #### profile : 
 
  * Enable `~/.bashrc` if running bash.
- * If `~/bin/` exist then add it PATH.
+ * If `~/bin/` exist then add it to PATH.
 
 
 #### screenrc : 
 
- * Customize screen with somegeneral option
+ * Customize screen with some general option.
  * Add some keybindings for a more simple navigation :
   * `F1` select window 0
   * `F2` select window 1
