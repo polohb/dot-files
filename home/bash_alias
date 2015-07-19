@@ -1,10 +1,10 @@
 ##
-# FileName : bash_alias               
-#                                     
-# Author :  polohb@gmail.com          
-#                                     
-# Desc : some usefull personal alias  
-##                                     
+# FileName : bash_alias
+#
+# Author :  polohb@gmail.com
+#
+# Desc : some usefull personal alias
+##
 
 
 #-----------------------
@@ -46,17 +46,17 @@ alias tart='tar -tvvzf'
 alias rm='rm -i'
 
 # delete Xemacs save files
-alias rmxemacs='echo "Suppression des fichiers générés par Xemacs" ; rm -rf *~ .*~ \#*'
+alias rmxemacs='echo "Delete generated Xemacs/Vim tmp files" ; rm -rf *~ .*~ \#*'
 
 # delete .saves-* files
-alias rmsaves='echo "Suppression des fichiers .save-*" ; rm -rf .saves-*'
+alias rmsaves='echo "Delete .save-* files" ; rm -rf .saves-*'
 
-# delete 
+# delete nfo and torrent files
 alias rmnfotorrent='rm *.nfo *.torrent'
 
 
 #-----------------------
-# change directories 
+# change directories
 #-----------------------
 
 alias cddl='cd /media/DATA_1TO/dl/'
@@ -118,6 +118,3 @@ alias pg='ps -Af | grep $1'
 
 # I often search my history, so I created an alias to grep it.
 alias hist='history | grep'
-
-
-
