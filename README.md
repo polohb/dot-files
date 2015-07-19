@@ -5,29 +5,29 @@
 Dotfiles are used to customize the system. Those are mine for linux.
 
 ## Install
-Run this : 
+Run this :
 ```
 cd ~/
 git clone https://github.com/polohb/dotfiles.git
 cd dotfiles/scripts/
-bash install.sh 
+bash install.sh
 ```
 
 What the script do :
- 
- * backup `~/.dotfiles` to `~/.dotfiles_old/` 
+
+ * backup `~/.dotfiles` to `~/.dotfiles_old/`
  * symlinks files from `~/dotfiles/home/` to the home directory `~/`
 
 
 ## Uninstall
-Run this : 
+Run this :
 ```
 cd ~/dotfiles/scripts/
-bash uninstall.sh 
+bash uninstall.sh
 ```
 
 What the script do :
- 
+
  * delete current `~/.dotfiles` files
  * copy saved `~/.dotfiles_old/.dotfiles` to the home directory `~/`
 
@@ -52,7 +52,7 @@ What the script do :
     └── vars.sh
 ```
 
-### What's in it : 
+### What's in it :
 
 #### bash_aliases :
 
@@ -62,12 +62,12 @@ What the script do :
  * `l` for 'ls -CF'
  * `lla` for 'll -Al'
 
-* tar : 
+* tar :
  * `tarc` for 'tar -cvvzf'
  * `tarx` for 'tar -xvvzf'
  * `tart` for 'tar -tvvzf
 
-* git (only if `/usr/bin/git` exist) : 
+* git (only if `/usr/bin/git` exist) :
  * `gco` for 'git checkout'
  * `gc`for 'git commit'
  * `g+` for 'git add'
@@ -79,25 +79,31 @@ What the script do :
  * `gl` for 'git log'
  * `gdiff` for 'git diff'
 
+* docker (only if `/usr/bin/docker` exist) :
+  * `dockerkillall` to kill all running containers
+  * `dockercleanc` to delete all stopped containers
+  * `dockercleani` to delete all untagged images
+  * `dockerclean` to delete all stopped containers and all untagged images
+
 and others minors alias (@see ~/dotfiles/home/bash_alias)
 
 
 #### bash_prompt :
 
  * Define some color for a more simple PS1 def.
- * Prompt will be like this : 
- 
+ * Prompt will be like this :
+
  ![Prompt Style](./prompt.png)
 
 
 
-#### profile : 
+#### profile :
 
  * Enable `~/.bashrc` if running bash.
  * If `~/bin/` exist then add it to PATH.
 
 
-#### screenrc : 
+#### screenrc :
 
  * Customize screen with some general option.
  * Add some keybindings for a more simple navigation :
@@ -108,12 +114,10 @@ and others minors alias (@see ~/dotfiles/home/bash_alias)
   * `F5` go to previous window
   * `F6` go to next window
   * `F7` change the title
-  * `F8` create a new window 
+  * `F8` create a new window
   * `F9` kill the current window
 
 
 #### vimrc :
 
 Todo : update vimrc description.
-
- 
