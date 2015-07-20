@@ -25,7 +25,7 @@ shopt -s checkwinsize
 # much easier for re-running commands, especially when they must be modified.
 shopt -s cmdhist
 
-# ### histappend 
+# ### histappend
 # This is a useful option when one uses multiple terminals at one time
 # (as I always do). This option will append each session's history to the
 # $HISTFILE rather than replace it. This way, history from all terminals can be
@@ -86,8 +86,10 @@ if [ -f /usr/bin/most ]; then
     export MANPAGER="/usr/bin/most -s"
 fi
 
+# Location of encfs config file 
+if [ -f /usr/bin/encfs ]; then
+        export ENCFS6_CONFIG="$HOME/.encfs6.xml"
+fi
+
 # set up java env
 #. /opt/sun-java6/envsetup.sh
-
-
-
