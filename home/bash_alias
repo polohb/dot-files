@@ -96,7 +96,7 @@ fi
 #-----------------------
 if [ -f /usr/bin/docker ]; then
     # Kill all running containers.
-    alias dockerkillall='printf \n>>> Killing all runing containers\n\n" && docker kill $(docker ps -q)'
+    alias dockerkillall='printf "\n>>> Killing all runing containers\n\n" && docker kill $(docker ps -q)'
     # Delete all stopped containers.
     alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
     # Delete all untagged images.
