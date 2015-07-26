@@ -46,6 +46,9 @@ What the script do :
 │   └── vimrc
 ├── prompt.png
 ├── README.md
+├── root
+│   ├── bashrc
+│   ├── install.sh
 └── scripts
     ├── install.sh
     ├── uninstall.sh
@@ -121,3 +124,24 @@ and others minors alias (@see ~/dotfiles/home/bash_alias)
 #### vimrc :
 
 Todo : update vimrc description.
+
+### Scripts
+
+#### vars.sh
+This files contains some essentials vars :
+* `dotfiles_dir` : dotfiles directory that contains the dotfiles to copy
+* `olddotfiles_dir` : dotfiles backup directory
+* `files` : list of dotfiles we want to link to our home directory
+
+Add or remove name in the `files` variable if you do not want the default ones.
+
+#### install.sh
+Just launch this script to  install the dotfiles.
+
+It will :
+* backup `~/.dotfiles` to `~/.dotfiles_old/`
+* create symlinks files from `~/dotfiles/home/` to the home directory `~/`
+
+
+#### uninstall.sh
+Just launch this script to get back your dotfiles configuration.
