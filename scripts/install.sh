@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ##
-# FileName : makesymlinks.sh               
-#                                     
-# Author :  polohb@gmail.com          
-#                                     
-# Desc : creates symlinks from the home directory 
+# FileName : makesymlinks.sh
+#
+# Author :  polohb@gmail.com
+#
+# Desc : creates symlinks from the home directory
 #        to any desired dotfiles in ~/dotfiles
 #
 #
@@ -18,34 +18,34 @@ source ./vars.sh
 
 
 #-----------------------
-# functions 
+# functions
 #-----------------------
 create_symlinks () {
-    
+
     # create dotfiles_old in homedir
-    echo "Creating backup dir : ${olddotfiles_dir}"
+    echo "Creating backup dir : ${OLDDOTFILES_DIR}"
     echo ""
-	if [ -e ${olddotfiles_dir} -a ! -d ${olddotfiles_dir} ]; then
-		echo "${olddotfiles_dir} exist and is not a folder"
-        echo "exit ..."
-        exit -1
+	if [[ -e ${OLDDOTFILES_DIR} -a ! -d ${OLDDOTFILES_DIR} ]]; then
+    echo "${OLDDOTFILES_DIR} exist and is not a folder"
+    echo "exit ..."
+    exit -1
 	fi
-    mkdir -p ${olddotfiles_dir}
+    mkdir -p ${OLDDOTFILES_DIR}
 
     # change to the dotfiles directory
-    cd ${dotfiles_dir}
+    cd ${DOTFILES_DIR}
 
     # move any existing dotfiles in homedir to ~/dotfiles_old
-    # then create symlinks from the homedir to any files in the 
+    # then create symlinks from the homedir to any files in the
     # ~/dotfiles directory specified in $files
-    echo "Moving ~/.dotfiles to ${olddotfiles_dir} and create symlink to $dotfiles_dir"
+    echo "Moving ~/.dotfiles to ${OLDDOTFILES_DIR} and create symlink to $DOTFILES_DIR"
     echo " "
-    for file in $files; do
-        echo "-> copy ${HOME}/.$file to $olddotfiles_dir/.$file"
-        echo "   link ${HOME}/.$file -> ${dotfiles_dir}/${file}"
+    for file in ${FILES}; do
+        echo "-> copy ${HOME}/.${file} to ${OLDDOTFILES_DIR}/.${file}"
+        echo "   link ${HOME}/.${file} -> ${DOTFILES_DIR}/${file}"
         echo ""
-        mv ${HOME}/.${file} ${olddotfiles_dir}/
-        ln -s ${dotfiles_dir}/${file} ${HOME}/.$file
+        mv ${HOME}/.${file} ${OLDDOTFILES_DIR}/
+        ln -s ${DOTFILES_DIR}/${file} ${HOME}/.${file}
     done
 }
 
@@ -55,5 +55,3 @@ create_symlinks () {
 # launch script
 #-----------------------
 create_symlinks
-
-

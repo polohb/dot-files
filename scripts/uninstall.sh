@@ -1,11 +1,11 @@
 #!/bin/bash
 
 ##
-# FileName : makesymlinks.sh               
-#                                     
-# Author :  polohb@gmail.com          
-#                                     
-# Desc : restore saved original dotfiles 
+# FileName : makesymlinks.sh
+#
+# Author :  polohb@gmail.com
+#
+# Desc : restore saved original dotfiles
 #		 from the backup dir to home
 #
 #
@@ -18,18 +18,18 @@ source ./vars.sh
 
 
 #-----------------------
-# functions 
+# functions
 #-----------------------
 get_oldconfig_back () {
 
-    echo "Moving back ${olddotfiles_dir}/.dotfiles to ${HOME}"
+    echo "Moving back ${OLDDOTFILES_DIR}/.dotfiles to ${HOME}"
     echo ""
-    for file in $files; do
-        echo "-> copy $olddotfiles_dir/.$file to ${HOME}/.$file"
+    for file in ${FILES}; do
+        echo "-> copy ${OLDDOTFILES_DIR}/.${file} to ${HOME}/.${file}"
         echo ""
         # Use rm + cp
         rm ${HOME}/.$file
-        cp $olddotfiles_dir/.$file to ${HOME}/.$file
+        cp ${OLDDOTFILES_DIR}/.${file} to ${HOME}/.${file}
     done
 
 }
@@ -39,7 +39,3 @@ get_oldconfig_back () {
 # launch script
 #-----------------------
 get_oldconfig_back
-
-
-
-
