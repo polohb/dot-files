@@ -25,7 +25,7 @@ create_symlinks () {
     # create dotfiles_old in homedir
     echo "Creating backup dir : ${OLDDOTFILES_DIR}"
     echo ""
-	if [[ -e ${OLDDOTFILES_DIR} -a ! -d ${OLDDOTFILES_DIR} ]]; then
+	if [[ -e ${OLDDOTFILES_DIR} ]] && [[ ! -d ${OLDDOTFILES_DIR} ]]; then
     echo "${OLDDOTFILES_DIR} exist and is not a folder"
     echo "exit ..."
     exit -1
