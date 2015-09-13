@@ -121,6 +121,12 @@ if [[ -f ${HOME}/softs/bash-git-prompt/gitprompt.sh ]]; then
 fi
 
 
+if [[ -f ${HOME}/.nvm/nvm.sh ]]; then
+    # Source the script
+    . ~/.nvm/nvm.sh
+    nvm use default
+fi
+
 
 
 # set up java env
