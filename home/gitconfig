@@ -17,6 +17,9 @@
 	rebase = true
 	default = current
 
+[fetch]
+    prune = true
+
 [alias]
   cl = clone
   co = checkout
