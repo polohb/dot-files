@@ -36,19 +36,22 @@ What the script do :
 ## Hierarchy
 <!-- generated with tree -->
 ```
+.
 ├── home
 │   ├── bash_alias
 │   ├── bash_logout
 │   ├── bash_prompt
 │   ├── bashrc
+│   ├── gitconfig
 │   ├── profile
 │   ├── screenrc
-│   └── vimrc
+│   ├── vimrc
+│   └── zshrc
 ├── prompt.png
 ├── README.md
 ├── root
 │   ├── bashrc
-│   ├── install.sh
+│   └── install.sh
 └── scripts
     ├── install.sh
     ├── uninstall.sh
@@ -119,6 +122,19 @@ and others minors alias (@see ~/dotfiles/home/bash_alias)
   * `F7` change the title
   * `F8` create a new window
   * `F9` kill the current window
+
+#### gitconfig :
+
+  * Define some basic color.
+  * Set `user.name` and `user.email`
+  * Define some aliases for basic task and powerfull history commands
+
+#### zshrc :
+
+ * Define a zsh environment based on [oh-my-zsh](ttps://github.com/robbyrussell/oh-my-zsh)
+ * Use `agnoster` theme that need [Powerline fonts](https://github.com/powerline/fonts.git)
+ * Default plugins enabled : `git , docker , docker-compose`
+ * Custom plugins enabled : [alias-tips](https://github.com/djui/alias-tips.git)
 
 
 #### vimrc :
