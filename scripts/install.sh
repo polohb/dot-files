@@ -49,9 +49,36 @@ create_symlinks () {
     done
 }
 
+# TODO check  curl , git are present
+#.zshrc will be changed with create_symlinks
+install_zsh() {
+    cd ~/
+
+    # Install oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    #git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git .oh-my-zsh
+
+    # Install alias-tips
+    #cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
+    cd ~/.oh-my-zsh/custom/plugins
+    git clone https://github.com/djui/alias-tips.git
+    cd -
+
+    # install powerline fonts
+    cd /tmp
+    git clone https://github.com/powerline/fonts.git
+    cd fonts
+    bash install.sh
+
+
+
+
+}
 
 
 #-----------------------
 # launch script
 #-----------------------
+
+install_zsh
 create_symlinks

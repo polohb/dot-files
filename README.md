@@ -126,15 +126,16 @@ and others minors alias (@see ~/dotfiles/home/bash_alias)
 #### gitconfig :
 
   * Define some basic color.
-  * Set `user.name` and `user.email`
-  * Define some aliases for basic task and powerfull history commands
+  * Set `user.name` and `user.email`.
+  * Set vim as default editor.
+  * Define some aliases for basic task and powerfull history commands.
 
 #### zshrc :
 
- * Define a zsh environment based on [oh-my-zsh](ttps://github.com/robbyrussell/oh-my-zsh)
- * Use `agnoster` theme that need [Powerline fonts](https://github.com/powerline/fonts.git)
- * Default plugins enabled : `git , docker , docker-compose`
- * Custom plugins enabled : [alias-tips](https://github.com/djui/alias-tips.git)
+ * Define a zsh environment based on [oh-my-zsh](ttps://github.com/robbyrussell/oh-my-zsh).
+ * Use `agnoster` theme that need [Powerline fonts](https://github.com/powerline/fonts.git).
+ * Default plugins enabled : `git , docker , docker-compose`.
+ * Custom plugins enabled : [alias-tips](https://github.com/djui/alias-tips.git).
 
 
 #### vimrc :
@@ -154,7 +155,7 @@ Add or remove name in the `files` variable if you do not want the default ones.
 #### install.sh
 Just launch this script to  install the dotfiles.
 
-It will :
+This will :
 * backup `~/.dotfiles` to `~/.dotfiles_old/`
 * create symlinks files from `~/dotfiles/home/` to the home directory `~/`
 

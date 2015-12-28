@@ -1,3 +1,7 @@
+[user]
+  name = polohb
+  email = polohb@gmail.com
+
 [color]
   ui = auto
   branch = auto
@@ -6,19 +10,23 @@
   status = auto
   pager = true
 
-[user]
-	name = polohb
-	email = polohb@gmail.com
+[core]
+  editor = vim
+  pager = less -FRSX
+  autocrlf = input
+
+[merge]
+  tool = vimdiff
 
 [push]
   default = current
 
 [pull]
-	rebase = true
-	default = current
+  rebase = true
+  default = current
 
 [fetch]
-    prune = true
+  prune = true
 
 [alias]
   cl = clone
