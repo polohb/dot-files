@@ -20,4 +20,4 @@ readonly DOTFILES_DIR="${HOME}/dotfiles/home"
 readonly OLDDOTFILES_DIR="${HOME}/.dotfiles_old"
 
 # list of files/folders to symlink in homedir
-readonly FILES="bashrc bash_alias bash_prompt bash_logout vimrc screenrc profile"
+readonly FILES="bashrc bash_alias bash_prompt bash_logout vimrc screenrc profile gitconfig zshrc tmux.conf"

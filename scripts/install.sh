@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 ##
 # FileName : makesymlinks.sh
@@ -41,15 +41,17 @@ create_symlinks () {
     echo "Moving ~/.dotfiles to ${OLDDOTFILES_DIR} and create symlink to $DOTFILES_DIR"
     echo " "
     for file in ${FILES}; do
-        echo "-> copy ${HOME}/.${file} to ${OLDDOTFILES_DIR}/.${file}"
+        if [ -f ${HOME}/.${file} ]; then
+		echo "-> copy ${HOME}/.${file} to ${OLDDOTFILES_DIR}/.${file}"
+        	mv ${HOME}/.${file} ${OLDDOTFILES_DIR}/
+	fi
         echo "   link ${HOME}/.${file} -> ${DOTFILES_DIR}/${file}"
-        echo ""
-        mv ${HOME}/.${file} ${OLDDOTFILES_DIR}/
-        ln -s ${DOTFILES_DIR}/${file} ${HOME}/.${file}
+	ln -s ${DOTFILES_DIR}/${file} ${HOME}/.${file}
+	echo ""
     done
 }
 
-# TODO check  curl , git are present
+# TODO check  curl , git, zsh  are present
 #.zshrc will be changed with create_symlinks
 install_zsh() {
     cd ~/
@@ -70,8 +72,11 @@ install_zsh() {
     cd fonts
     bash install.sh
 
+    # enable powerline fonts in xfce4-terminal
+    mkdir -p ${HOME}/.config/xfce4/terminal
+    cp ${DOTFILES_DIR}/config-xfce4-terminal/terminalrc ${HOME}/.config/xfce4/terminal/terminalrc       
 
-
+    echo "Don't forget to \"logout/login\" to enable zsh and powerline fonts"
 
 }
 
