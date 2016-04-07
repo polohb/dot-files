@@ -67,10 +67,10 @@ install_zsh() {
     cd -
 
     # install powerline fonts
-    cd /tmp
-    git clone https://github.com/powerline/fonts.git
-    cd fonts
-    bash install.sh
+    #cd /tmp
+    #git clone https://github.com/powerline/fonts.git
+    #cd fonts
+    #bash install.sh
 
     # enable powerline fonts in xfce4-terminal
     mkdir -p ${HOME}/.config/xfce4/terminal
